@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Dashboard for Miyie</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icon Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Sidebar Menu Samping -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fa-solid fa-cake-candles"></i> HBD APP
+        </div>
+        <ul class="nav-links">
+            <li class="active" onclick="openTab(event, 'dashboard')">
+                <a href="#"><i class="fa-solid fa-house"></i> Dashboard Utama</a>
+            </li>
+            <li onclick="openTab(event, 'photos')">
+                <a href="#"><i class="fa-solid fa-images"></i> rasyakil dan miyie</a>
+            </li>
+            <li onclick="openTab(event, 'wishes')">
+                <a href="#"><i class="fa-solid fa-envelope"></i> doa untuk miyie</a>
+            </li>
+            <li onclick="openTab(event, 'songs')">
+                <a href="#"><i class="fa-solid fa-music"></i> our favorite songs</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Atas -->
+        <header class="header">
+            <h2>HAPPY BIRTHDAY PRETTY MIYIE 🎉</h2>
+            <p>Sistem Informasi Manajemen Pertambahan Usia 🎂</p>
+        </header>
+
+        <!-- TAB 1: DASHBOARD UTAMA -->
+        <div id="dashboard" class="tab-content active">
+            <section class="stats-grid">
+                <div class="card stat-card">
+                    <i class="fa-solid fa-heart icon"></i>
+                    <div class="stat-info">
+                        <h3>100%</h3>
+                        <p>Level Sayang Teman</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <i class="fa-solid fa-calendar-days icon"></i>
+                    <div class="stat-info">
+                        <h3>+1 Tahun</h3>
+                        <p>selamat sudah bertambah usia</p>
+                    </div>
+                </div>
+                <div class="card stat-card">
+                    <i class="fa-solid fa-gift icon"></i>
+                    <div class="stat-info">
+                        <h3>Unlimited</h3>
+                        <p>Kebahagiaan & Rezeki</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="card">
+                    <h3><i class="fa-solid fa-circle-info"></i> doa terbaik untuk miyie</h3>
+                    <p class="welcome-text">
+                        Words aren't enough to express how much you mean to me. Having you in my life as a best friend and someone so special is a blessing I cherish every day. Watching you grow into the incredible person you are has been such a gift. As you step into Chapter 23, I hope this year brings you endless happiness, peace, and all the success you deserve. Thank you for being my anchor and my favorite part of every day. Here’s to celebrating you today and always. ✨
+                    </p>
+
+                    <h3><i class="fa-solid fa-list-check"></i> Milestone Year Check</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Misi / Target Usia Baru</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Makin Bahagia & Jarang Galau</td>
+                                <td><span class="badge success">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Semua Cita-cita Tercapai</td>
+                                <td><span class="badge warning">In Progress</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB 2: GALERI FOTO -->
+        <div id="photos" class="tab-content">
+            <div class="card">
+                <h3><i class="fa-solid fa-images"></i> Rasyakil & Miyie</h3>
+                
+                <div class="photo-gallery">
+                    <div class="photo-
