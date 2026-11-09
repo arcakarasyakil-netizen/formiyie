@@ -1,4 +1,3 @@
-
 ```html
 <!DOCTYPE html>
 <html lang="id">
@@ -106,13 +105,12 @@
                 <h3><i class="fa-solid fa-images"></i> Rasyakil & Miyie</h3>
                 
                 <div class="photo-gallery">
-                    <!-- Ganti 'foto1.jpg' dengan nama file foto yang kamu upload ke GitHub -->
                     <div class="photo-card">
-                        <img src="foto1.jpg" alt="Rasyakil & Miyie 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+Foto+1+di+GitHub'">
+                        <img src="Rasyakil & Miyie 1" alt="Rasyakil & Miyie 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+Foto+1+di+GitHub'">
                         <p>✨</p>
                     </div>
                     <div class="photo-card">
-                        <img src="foto2.jpg" alt="Rasyakil & Miyie 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+Foto+2+di+GitHub'">
+                        <img src="Rasyakil Miyie 2" alt="Rasyakil & Miyie 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+Foto+2+di+GitHub'">
                         <p>💖</p>
                     </div>
                 </div>
