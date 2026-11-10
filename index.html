@@ -16,16 +16,16 @@
             <i class="fa-solid fa-cake-candles"></i> HBD APP
         </div>
         <ul class="nav-links">
-            <li class="nav-item active" onclick="openTab(event, 'dashboard')">
+            <li id="btn-dashboard" class="nav-item active" onclick="switchTab('dashboard')">
                 <i class="fa-solid fa-house"></i> Dashboard Utama
             </li>
-            <li class="nav-item" onclick="openTab(event, 'photos')">
+            <li id="btn-photos" class="nav-item" onclick="switchTab('photos')">
                 <i class="fa-solid fa-images"></i> rasyakil dan miyie
             </li>
-            <li class="nav-item" onclick="openTab(event, 'wishes')">
+            <li id="btn-wishes" class="nav-item" onclick="switchTab('wishes')">
                 <i class="fa-solid fa-envelope"></i> doa untuk miyie
             </li>
-            <li class="nav-item" onclick="openTab(event, 'songs')">
+            <li id="btn-songs" class="nav-item" onclick="switchTab('songs')">
                 <i class="fa-solid fa-music"></i> our favorite songs
             </li>
         </ul>
@@ -36,7 +36,7 @@
         <!-- Header Atas -->
         <header class="header">
             <h2>HAPPY BIRTHDAY PRETTY MIYIE 🎉</h2>
-            <p>Sistem Informasi Manajemen Pertambahan Usia 🎂</p>
+            <p>Khusus untuk Miyie 🎂</p>
         </header>
 
         <!-- TAB 1: DASHBOARD UTAMA -->
@@ -46,7 +46,7 @@
                     <i class="fa-solid fa-heart icon"></i>
                     <div class="stat-info">
                         <h3>100%</h3>
-                        <p>Level Sayang Teman</p>
+                        <p>Level Sayang</p>
                     </div>
                 </div>
                 <div class="card stat-card">
@@ -72,91 +72,4 @@
                         Words aren't enough to express how much you mean to me. Having you in my life as a best friend and someone so special is a blessing I cherish every day. Watching you grow into the incredible person you are has been such a gift. As you step into Chapter 23, I hope this year brings you endless happiness, peace, and all the success you deserve. Thank you for being my anchor and my favorite part of every day. Here’s to celebrating you today and always. ✨
                     </p>
 
-                    <h3><i class="fa-solid fa-list-check"></i> Milestone Year Check</h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Misi / Target Usia Baru</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Makin Bahagia & Jarang Galau</td>
-                                <td><span class="badge success">Active</span></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Semua Cita-cita Tercapai</td>
-                                <td><span class="badge warning">In Progress</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </div>
-
-        <!-- TAB 2: GALERI FOTO -->
-        <div id="photos" class="tab-content">
-            <div class="card">
-                <h3><i class="fa-solid fa-images"></i> Rasyakil & Miyie</h3>
-                
-                <div class="photo-gallery">
-                    <div class="photo-card">
-                        <img src="Rasykil Miyie 3.jpg" alt="Foto 1" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+foto1.jpg+di+GitHub'">
-                        <p>✨</p>
-                    </div>
-                    <div class="photo-card">
-                        <img src="Rasyakil Miyie 2.jpg" alt="Foto 2" onerror="this.src='https://via.placeholder.com/300x200?text=Upload+foto2.jpg+di+GitHub'">
-                        <p>💖</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TAB 3: DOA UNTUK MIYIE -->
-        <div id="wishes" class="tab-content">
-            <div class="card">
-                <h3><i class="fa-solid fa-envelope-open-text"></i> Doa untuk Miyie</h3>
-                <div class="wish-box">
-                    <h4></h4> Harapan di Usia Ke-23</h4>
-                    <p>Semoga di umur 23 tahun ini, Miyie selalu dikelilingi oleh hal-hal baik, orang-orang yang sayang sama Miyie, diberi kemudahan dalam segala urusan, dan dilimpahkan kesehatan serta kebahagiaan yang nggak pernah putus</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- TAB 4: LAGU FAVORIT -->
-        <div id="songs" class="tab-content">
-            <div class="card">
-                <h3><i class="fa-solid fa-music"></i> Our Favorite Songs </h3>
-                <p class="welcome-text">Lagu khusus buat Miyie saat membuka web ini</p>
-                
-                <div class="spotify-container">
-                    <iframe style="border-radius:12px" src="https://open.spotify.com/track/0BtK8lJenHYbRn58vXlXJU?si=JDaib3BqT7uD6cF5JMXDIA&utm_source=copy-link" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <!-- Script Javascript Pindah Menu Tab -->
-    <script>
-        function openTab(evt, tabName) {
-            var tabcontent = document.getElementsByClassName("tab-content");
-            for (var i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("active");
-            }
-
-            var tablinks = document.querySelectorAll(".nav-links li");
-            for (var i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active");
-            }
-
-            document.getElementById(tabName).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-</body>
-</html>
+                    <h3><i class="fa
