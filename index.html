@@ -16,17 +16,25 @@
             <i class="fa-solid fa-cake-candles"></i> HBD APP
         </div>
         <ul class="nav-links">
-            <li id="btn-dashboard" class="nav-item active" onclick="bukaTab('dashboard')">
-                <i class="fa-solid fa-house"></i> Dashboard Utama
+            <li id="btn-dashboard" class="nav-item active">
+                <a href="javascript:void(0)" onclick="switchTab('dashboard')">
+                    <i class="fa-solid fa-house"></i> Dashboard Utama
+                </a>
             </li>
-            <li id="btn-photos" class="nav-item" onclick="bukaTab('photos')">
-                <i class="fa-solid fa-images"></i> rasyakil dan miyie
+            <li id="btn-photos" class="nav-item">
+                <a href="javascript:void(0)" onclick="switchTab('photos')">
+                    <i class="fa-solid fa-images"></i> rasyakil dan miyie
+                </a>
             </li>
-            <li id="btn-wishes" class="nav-item" onclick="bukaTab('wishes')">
-                <i class="fa-solid fa-envelope"></i> doa untuk miyie
+            <li id="btn-wishes" class="nav-item">
+                <a href="javascript:void(0)" onclick="switchTab('wishes')">
+                    <i class="fa-solid fa-envelope"></i> doa untuk miyie
+                </a>
             </li>
-            <li id="btn-songs" class="nav-item" onclick="bukaTab('songs')">
-                <i class="fa-solid fa-music"></i> our favorite songs
+            <li id="btn-songs" class="nav-item">
+                <a href="javascript:void(0)" onclick="switchTab('songs')">
+                    <i class="fa-solid fa-music"></i> our favorite songs
+                </a>
             </li>
         </ul>
     </aside>
@@ -143,29 +151,29 @@
 
     <!-- Script Javascript Pindah Tab -->
     <script>
-        function bukaTab(namaTab) {
-            // 1. Sembunyikan semua tab
+        function switchTab(tabId) {
+            // Sembunyikan semua tab
             var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function(tab) {
-                tab.style.display = 'none';
-            });
-
-            // 2. Nonaktifkan semua status menu
-            var menuItems = document.querySelectorAll('.nav-item');
-            menuItems.forEach(function(item) {
-                item.classList.remove('active');
-            });
-
-            // 3. Tampilkan tab yang dipilih
-            var tabTarget = document.getElementById(namaTab);
-            if (tabTarget) {
-                tabTarget.style.display = 'block';
+            for(var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
             }
 
-            // 4. Aktifkan menu yang diklik
-            var btnTarget = document.getElementById('btn-' + namaTab);
-            if (btnTarget) {
-                btnTarget.classList.add('active');
+            // Nonaktifkan style aktif menu
+            var items = document.querySelectorAll('.nav-item');
+            for(var j = 0; j < items.length; j++) {
+                items[j].classList.remove('active');
+            }
+
+            // Tampilkan tab target
+            var target = document.getElementById(tabId);
+            if(target) {
+                target.style.display = 'block';
+            }
+
+            // Aktifkan menu target
+            var btn = document.getElementById('btn-' + tabId);
+            if(btn) {
+                btn.classList.add('active');
             }
         }
     </script>
