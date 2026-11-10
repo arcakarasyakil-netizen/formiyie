@@ -16,16 +16,16 @@
             <i class="fa-solid fa-cake-candles"></i> HBD APP
         </div>
         <ul class="nav-links">
-            <li id="btn-dashboard" class="nav-item active" onclick="switchTab('dashboard')">
+            <li id="btn-dashboard" class="nav-item active" onclick="bukaTab('dashboard')">
                 <i class="fa-solid fa-house"></i> Dashboard Utama
             </li>
-            <li id="btn-photos" class="nav-item" onclick="switchTab('photos')">
+            <li id="btn-photos" class="nav-item" onclick="bukaTab('photos')">
                 <i class="fa-solid fa-images"></i> rasyakil dan miyie
             </li>
-            <li id="btn-wishes" class="nav-item" onclick="switchTab('wishes')">
+            <li id="btn-wishes" class="nav-item" onclick="bukaTab('wishes')">
                 <i class="fa-solid fa-envelope"></i> doa untuk miyie
             </li>
-            <li id="btn-songs" class="nav-item" onclick="switchTab('songs')">
+            <li id="btn-songs" class="nav-item" onclick="bukaTab('songs')">
                 <i class="fa-solid fa-music"></i> our favorite songs
             </li>
         </ul>
@@ -40,7 +40,7 @@
         </header>
 
         <!-- TAB 1: DASHBOARD UTAMA -->
-        <div id="dashboard" class="tab-content active">
+        <div id="dashboard" class="tab-content" style="display: block;">
             <section class="stats-grid">
                 <div class="card stat-card">
                     <i class="fa-solid fa-heart icon"></i>
@@ -105,5 +105,69 @@
                 
                 <div class="photo-gallery">
                     <div class="photo-card">
-                        <img src="Rasyakil & Miyie 1.jpg" alt="Foto 1" onerror="this.src='https://via.placeholder.com/300x200?text=Foto+1'">
+                        <img src="Rasyakil%20%26%20Miyie%201.jpg" alt="Foto 1" onerror="this.src='https://via.placeholder.com/300x200?text=Foto+1'">
                         <p>✨</p>
+                    </div>
+                    <div class="photo-card">
+                        <img src="Rasyakil Miyie 2.jpg" alt="Foto 2" onerror="this.src='https://via.placeholder.com/300x200?text=Foto+2'">
+                        <p>💖</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: DOA UNTUK MIYIE -->
+        <div id="wishes" class="tab-content" style="display: none;">
+            <div class="card">
+                <h3><i class="fa-solid fa-envelope-open-text"></i> Doa untuk Miyie</h3>
+                <div class="wish-box">
+                    <h4>✨ Harapan di Usia Ke-23</h4>
+                    <p>Semoga di umur 23 tahun ini, Miyie selalu dikelilingi oleh hal-hal baik, orang-orang yang sayang sama Miyie, diberi kemudahan dalam segala urusan, dan dilimpahkan kesehatan serta kebahagiaan yang nggak pernah putus.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: LAGU FAVORIT -->
+        <div id="songs" class="tab-content" style="display: none;">
+            <div class="card">
+                <h3><i class="fa-solid fa-music"></i> Our Favorite Songs 🎶</h3>
+                <p class="welcome-text">Lagu khusus buat Miyie saat membuka web ini</p>
+                
+                <div class="spotify-container">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0BtK8lJenHYbRn58vXlXJU?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Script Javascript Pindah Tab -->
+    <script>
+        function bukaTab(namaTab) {
+            // 1. Sembunyikan semua tab
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+
+            // 2. Nonaktifkan semua status menu
+            var menuItems = document.querySelectorAll('.nav-item');
+            menuItems.forEach(function(item) {
+                item.classList.remove('active');
+            });
+
+            // 3. Tampilkan tab yang dipilih
+            var tabTarget = document.getElementById(namaTab);
+            if (tabTarget) {
+                tabTarget.style.display = 'block';
+            }
+
+            // 4. Aktifkan menu yang diklik
+            var btnTarget = document.getElementById('btn-' + namaTab);
+            if (btnTarget) {
+                btnTarget.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
